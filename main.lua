@@ -1,5 +1,3 @@
-local DataStoreService = game:GetService("DataStoreService")
-local HapticService = game:GetService("HapticService")
 local lib = {}
 local SynFunctions = {}
 

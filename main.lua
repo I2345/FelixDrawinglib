@@ -21,7 +21,7 @@ protection.Name = "Kasma#7351"
 
 function boxesp(v, BoxOutline, Box)
     game:GetService("RunService").RenderStepped:Connect(function(deltaTime)
-        if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") and v ~= game.Players.LocalPlayer and v.Character.Health > 0 then
+        if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") and v ~= game.Players.LocalPlayer and v.Character.Humanoid.Health > 0 then
 
             local vector, onScreen = Camera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
 

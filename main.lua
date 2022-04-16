@@ -200,21 +200,23 @@ function lib:DrawAnimeWomen()
 end
 
 game.Players.PlayerAdded:Connect(function(v)
-    local BoxOutline = Drawing.new("Square")
-    BoxOutline.Visible = false
-    BoxOutline.Color = Color3.new(0,0,0)
-    BoxOutline.Thickness = 3
-    BoxOutline.Transparency = 1
-    BoxOutline.Filled = false
-
-    local Box = Drawing.new("Square")
-    Box.Visible = false
-    Box.Color = Color3.new(1,1,1)
-    Box.Thickness = 1
-    Box.Transparency = 1
-    Box.Filled = false
-
-    coroutine.wrap(boxesp)(v, BoxOutline, Box)
+    if ESP_Active then
+        local BoxOutline = Drawing.new("Square")
+        BoxOutline.Visible = false
+        BoxOutline.Color = Color3.new(0,0,0)
+        BoxOutline.Thickness = 3
+        BoxOutline.Transparency = 1
+        BoxOutline.Filled = false
+    
+        local Box = Drawing.new("Square")
+        Box.Visible = false
+        Box.Color = Color3.new(1,1,1)
+        Box.Thickness = 1
+        Box.Transparency = 1
+        Box.Filled = false
+    
+        coroutine.wrap(boxesp)(v, BoxOutline, Box)
+    end
 end)
 
 
